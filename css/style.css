@@ -254,6 +254,12 @@ section { padding: 96px 0; }
   align-items: center;
 }
 
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -264,7 +270,6 @@ section { padding: 96px 0; }
   border-radius: 100px;
   font-size: .85rem;
   font-weight: 600;
-  margin-bottom: 24px;
 }
 .hero-badge svg { width: 16px; height: 16px; flex-shrink: 0; }
 
