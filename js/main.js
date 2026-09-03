@@ -28,6 +28,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // ---- "Erstgespräch buchen": jump straight to the form once the contact
+  // card and form are stacked (single-column layout), instead of landing on
+  // the contact card above it. Side-by-side (wide) layout is left as-is. ----
+  var navCtaBtn = document.getElementById('navCtaBtn');
+  var contactForm = document.getElementById('kontakt-formular');
+  if (navCtaBtn && contactForm) {
+    navCtaBtn.addEventListener('click', function (e) {
+      if (window.matchMedia('(max-width: 1000px)').matches) {
+        e.preventDefault();
+        contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (history.replaceState) history.replaceState(null, '', '#kontakt-formular');
+      }
+    });
+  }
+
   // ---- FAQ accordion ----
   document.querySelectorAll('.faq-item').forEach(function (item) {
     var question = item.querySelector('.faq-question');

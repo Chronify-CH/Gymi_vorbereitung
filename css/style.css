@@ -312,11 +312,19 @@ section { padding: 96px 0; }
 }
 
 .hero-card {
+  display: block;
   background: rgba(255,255,255,0.98);
   border-radius: var(--radius-lg);
   padding: 32px;
   box-shadow: var(--shadow-lg);
   color: var(--color-text);
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.hero-card:hover, .hero-card:focus-visible {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), 0 0 0 2px var(--color-accent);
+  outline: none;
 }
 
 .hero-card-top {
