@@ -833,6 +833,18 @@ section { padding: 96px 0; }
 .contact-social a:hover { background: var(--color-accent); color: var(--color-primary-dark); }
 .contact-social svg { width: 18px; height: 18px; }
 
+.contact-social .linkedin-badge {
+  width: auto;
+  height: auto;
+  border-radius: 100px;
+  padding: 12px 22px;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: .95rem;
+}
+.contact-social .linkedin-badge svg { width: 22px; height: 22px; }
+
 .contact-form-card {
   background: #fff;
   border-radius: var(--radius-lg);
