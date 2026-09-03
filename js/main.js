@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var subject = encodeURIComponent('Anfrage Gymi-Vorbereitung: ' + name);
       var body = encodeURIComponent(bodyLines.join('\n'));
-      var mailtoLink = 'mailto:kontakt@gymi-coach-zuerich.ch?subject=' + subject + '&body=' + body;
+      var mailtoLink = 'mailto:arthpetr14@gmail.com?subject=' + subject + '&body=' + body;
 
       window.location.href = mailtoLink;
 
