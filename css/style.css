@@ -517,7 +517,7 @@ section { padding: 96px 0; }
    ========================================================= */
 .process-steps {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr) 0.7fr;
   gap: 24px;
   counter-reset: step;
 }
@@ -543,15 +543,27 @@ section { padding: 96px 0; }
   margin-bottom: 18px;
 }
 
-.process-step-finish {
-  border-color: var(--color-accent);
-  background: rgba(226, 164, 0, 0.06);
+/* Finish marker: no card chrome, just a yellow-ringed flag and a label */
+.process-finish {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 8px 24px;
 }
-.process-step-finish h3 { margin-bottom: 0; }
-.step-num.step-flag {
-  background: var(--color-accent);
-  font-size: 1.2rem;
+.process-finish .step-flag-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background: var(--color-bg);
+  font-size: 1.05rem;
+  margin-bottom: 18px;
 }
+.process-finish h3 { margin: 0; }
 
 .process-connector {
   display: none;
@@ -963,7 +975,7 @@ section { padding: 96px 0; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1fr auto;
   gap: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -1031,7 +1043,6 @@ section { padding: 96px 0; }
   .price-card.featured { transform: none; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 760px) {
